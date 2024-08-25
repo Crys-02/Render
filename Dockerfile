@@ -4,7 +4,7 @@ FROM maven:3.9.0-openjdk-17 AS build
 # Establece el directorio de trabajo
 WORKDIR /app
 
-# Copia el archivo pom.xml y los directorios necesarios
+# Copia el archivo pom.xml y el directorio src
 COPY pom.xml ./
 COPY src ./src
 
