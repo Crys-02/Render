@@ -23,11 +23,5 @@ COPY --from=build /app/target/mi-aplicacion.jar .
 # Exponer el puerto que utilizará la aplicación
 EXPOSE 8080
 
-# Construir la imagen Docker
-docker build -t mi-imagen .
-
-# Ejecutar el contenedor
-docker run -p 8080:8080 mi-imagen
-
 # Define el comando de inicio de la aplicación
 CMD ["java", "-jar", "mi-aplicacion.jar"]
